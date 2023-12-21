@@ -1,21 +1,17 @@
-import { useState } from 'react'
+import {Link} from "react-router-dom"
 import './App.css'
-import Home from "./Pages/Home";
-import About from "./Pages/About";
+//import Home from "./Pages/Home";
+//import About from "./Pages/About";
 
 function App() {
-  const [currentLocation, setCurrentLocation] = useState ("/")
-
-  return (
+  
+ return (
     <>
       <nav>
-        <button onClick={() => setCurrentLocation("/")} type='button'>Home</button>
-        <button onClick={() => setCurrentLocation("/about")} type='button'>About</button>
+        <Link to = "/">Home</Link>
+        <Link to = "/about">About</Link>
       </nav>
-      <main>
-        {currentLocation === "/" && <Home/>}
-        {currentLocation === "/about" && <About/>}
-      </main>
+      <main>???</main>
     </>
   );
 }
